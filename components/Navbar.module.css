@@ -1,0 +1,76 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 3rem;
+  background: rgba(250, 246, 240, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(138, 122, 114, 0.1);
+  animation: fadeDown 0.8s ease both;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.navScrolled {
+  background: rgba(250, 246, 240, 0.95);
+  box-shadow: 0 2px 30px rgba(30, 23, 20, 0.07);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--rose);
+}
+
+.links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.links a {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.links a:hover {
+  color: var(--rose);
+}
+
+.cta {
+  background: var(--rose);
+  color: #fff;
+  padding: 0.55rem 1.6rem;
+  border-radius: var(--radius);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.cta:hover {
+  background: var(--mid);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1.1rem 1.5rem;
+  }
+  .links {
+    display: none;
+  }
+}

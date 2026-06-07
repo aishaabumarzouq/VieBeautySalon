@@ -1,0 +1,80 @@
+.section {
+  padding: 7rem 6rem;
+  background: var(--cream);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: rgba(138, 122, 114, 0.2);
+}
+
+.card {
+  background: var(--ivory);
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.card:hover {
+  background: var(--dark);
+}
+
+.card:hover .name,
+.card:hover .desc {
+  color: var(--cream);
+}
+
+.card:hover .icon {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.card:hover .line {
+  width: 100%;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  display: block;
+  transition: opacity 0.3s;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+  color: var(--dark);
+  transition: color 0.3s;
+}
+
+.desc {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--taupe);
+  font-weight: 300;
+  transition: color 0.3s;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--rose);
+  transition: width 0.4s ease;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
